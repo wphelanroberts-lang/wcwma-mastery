@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Assignments - Gratitude | WCWMA</title>
+    <link rel="stylesheet" href="assignments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+                 <!-- Header with Navigation -->
+         <header class="header">
+             <div class="back-button" onclick="goBack()">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+                 <span>Back to Mastery</span>
+             </div>
+         </header>
+         
+         <!-- WCWMA Brand Header -->
+                   <div class="wcwma-brand-header">
+              <div class="brand-logo">
+                  <img src="WCWMA Logo - Transparent.png" alt="WCWMA" class="brand-logo-img">
+              </div>
+             <div class="brand-text">
+                 <h1 class="brand-title">World Class Warrior</h1>
+                 <h2 class="brand-subtitle">Martial Arts</h2>
+             </div>
+         </div>
+
+                 <!-- Main Content -->
+         <main class="main-content">
+                           <!-- Great Grand Master Section -->
+              <div class="ggm-section">
+                  <div class="ggm-image-container">
+                      <img src="GGMs.png" alt="Great Grand Masters KJN Ernie and KJN Tony teaching Gratitude" class="ggm-image">
+                      <div class="ggm-overlay">
+                          <div class="ggm-quote">"Practice gratitude in every movement, every breath, every moment."</div>
+                          <div class="ggm-name">- Great Grand Masters KJN Ernie & KJN Tony</div>
+                      </div>
+                  </div>
+              </div>
+             
+             <!-- Theme Header -->
+             <div class="theme-header">
+                <h1 class="page-title">Weekly Assignments</h1>
+                <div class="theme-badge">
+                    <div class="theme-icon">🙏</div>
+                    <h2 class="theme-title">Gratitude</h2>
+                    <p class="theme-subtitle">This Week's Mastery Theme</p>
+                </div>
+            </div>
+
+            <!-- Progress Overview -->
+            <div class="progress-overview">
+                <div class="progress-info">
+                    <span class="progress-label">Progress</span>
+                    <span class="progress-count">0 of 4</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Assignments List -->
+            <div class="assignments-container">
+                <h3 class="assignments-title">Your Practice Assignments</h3>
+                
+                <div class="assignment-item" data-id="1">
+                    <div class="assignment-content">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="assignment1" class="assignment-checkbox">
+                            <label for="assignment1" class="checkbox-label"></label>
+                        </div>
+                        <div class="assignment-text">
+                            <h4>Gratitude Bow</h4>
+                            <p>Start every class with a gratitude bow</p>
+                        </div>
+                    </div>
+                    <button class="mark-complete-btn" onclick="markComplete(1)">Mark Complete</button>
+                </div>
+
+                                       <div class="assignment-item" data-id="2">
+                           <div class="assignment-content">
+                               <div class="checkbox-container">
+                                   <input type="checkbox" id="assignment2" class="assignment-checkbox">
+                                   <label for="assignment2" class="checkbox-label"></label>
+                               </div>
+                               <div class="assignment-text">
+                                   <h4>Front Kicks Practice</h4>
+                                   <p>Practice 10 front kicks at home</p>
+                               </div>
+                           </div>
+                           <button class="mark-complete-btn" onclick="markComplete(2)">Mark Complete</button>
+                       </div>
+                       
+                       <!-- Front Kicks Video Tutorial -->
+                       <div class="video-tutorial-section">
+                           <h4 class="video-title">🎥 Front Kick Tutorial</h4>
+                           <p class="video-description">Watch this demonstration of proper front kick technique, then practice 10 times at home.</p>
+                           
+                           <div class="video-container">
+                               <video id="frontKickVideo" controls preload="metadata" poster="front-kick-poster.jpg">
+                                   <source src="front-kick-tutorial.mp4" type="video/mp4">
+                                   <source src="front-kick-tutorial.webm" type="video/webm">
+                                   <p class="video-fallback">Your browser doesn't support video playback. 
+                                   <a href="front-kick-tutorial.mp4" download>Download the video</a> to watch it.</p>
+                               </video>
+                               
+                               <div class="video-controls">
+                                   <button class="play-pause-btn" onclick="toggleVideo()">
+                                       <span class="play-icon">▶️</span>
+                                       <span class="pause-icon" style="display: none;">⏸️</span>
+                                   </button>
+                                   <button class="slow-motion-btn" onclick="toggleSlowMotion()">
+                                       <span class="normal-speed">🐌 Slow Motion</span>
+                                       <span class="slow-speed" style="display: none;">⚡ Normal Speed</span>
+                                   </button>
+                                   <button class="loop-btn" onclick="toggleLoop()">
+                                       <span class="loop-off">🔄 Loop Off</span>
+                                       <span class="loop-on" style="display: none;">🔄 Loop On</span>
+                                   </button>
+                               </div>
+                               
+                               <div class="practice-counter">
+                                   <h5>Practice Counter</h5>
+                                   <div class="counter-display">
+                                       <span id="kickCount">0</span> / 10 kicks completed
+                                   </div>
+                                   <div class="counter-buttons">
+                                       <button class="counter-btn" onclick="incrementKick()">✅ Kick Complete</button>
+                                       <button class="counter-btn reset" onclick="resetKickCount()">🔄 Reset</button>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="technique-tips">
+                               <h5>💡 Technique Tips</h5>
+                               <ul>
+                                   <li>Keep your standing leg slightly bent</li>
+                                   <li>Point your toes back toward your shin</li>
+                                   <li>Extend your leg fully at the knee</li>
+                                   <li>Keep your upper body straight</li>
+                                   <li>Return to starting position with control</li>
+                               </ul>
+                           </div>
+                       </div>
+
+                <div class="assignment-item" data-id="3">
+                    <div class="assignment-content">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="assignment3" class="assignment-checkbox">
+                            <label for="assignment3" class="checkbox-label"></label>
+                        </div>
+                        <div class="assignment-text">
+                            <h4>Help a Classmate</h4>
+                            <p>Help a classmate with their form during sparring practice</p>
+                        </div>
+                    </div>
+                    <button class="mark-complete-btn" onclick="markComplete(3)">Mark Complete</button>
+                </div>
+
+                <div class="assignment-item" data-id="4">
+                    <div class="assignment-content">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="assignment4" class="assignment-checkbox">
+                            <label for="assignment4" class="checkbox-label"></label>
+                        </div>
+                        <div class="assignment-text">
+                            <h4>Share with Family</h4>
+                            <p>Recite the theme to a family member and explain what it means to you</p>
+                        </div>
+                    </div>
+                    <button class="mark-complete-btn" onclick="markComplete(4)">Mark Complete</button>
+                </div>
+            </div>
+
+            <!-- Motivation Section -->
+            <div class="motivation-section">
+                <div class="motivation-card">
+                    <div class="motivation-icon">💪</div>
+                    <h3>Keep Going, Warrior!</h3>
+                    <p>Every completed assignment brings you closer to mastering gratitude. You're doing amazing!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Completion Celebration Modal -->
+        <div class="celebration-modal" id="celebrationModal">
+            <div class="modal-content">
+                <div class="celebration-icon">🎉</div>
+                <h3>Assignment Complete!</h3>
+                <p>Great job completing this assignment! You're one step closer to mastering gratitude.</p>
+                <button class="modal-close-btn" onclick="closeCelebration()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assignments.js"></script>
+</body>
+</html>

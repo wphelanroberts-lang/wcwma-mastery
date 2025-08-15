@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges & Streaks - WCWMA</title>
+    <link rel="stylesheet" href="badges.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+                 <!-- Header with Navigation -->
+         <header class="header">
+             <div class="back-button" onclick="goBack()">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+                 <span>Back to Mastery</span>
+             </div>
+         </header>
+         
+         <!-- WCWMA Brand Header -->
+                   <div class="wcwma-brand-header">
+              <div class="brand-logo">
+                  <img src="WCWMA Logo - Transparent.png" alt="WCWMA" class="brand-logo-img">
+              </div>
+             <div class="brand-text">
+                 <h1 class="brand-title">World Class Warrior</h1>
+                 <h2 class="brand-subtitle">Martial Arts</h2>
+             </div>
+         </div>
+
+                 <!-- Main Content -->
+         <main class="main-content">
+                           <!-- Great Grand Master Section -->
+              <div class="ggm-section">
+                  <div class="ggm-image-container">
+                      <img src="GGMs.png" alt="Great Grand Masters KJN Ernie and KJN Tony teaching Gratitude" class="ggm-image">
+                      <div class="ggm-overlay">
+                          <div class="ggm-quote">"Achievement comes from consistent practice and grateful hearts."</div>
+                          <div class="ggm-name">- Great Grand Masters KJN Ernie & KJN Tony</div>
+                      </div>
+                  </div>
+              </div>
+             
+             <!-- Streak Header -->
+             <div class="streak-header">
+                <div class="streak-badge">
+                    <div class="streak-icon">🔥</div>
+                    <h1 class="streak-title">Current Streak</h1>
+                    <div class="streak-count">3 Weeks in a Row</div>
+                    <p class="streak-subtitle">Keep up the amazing work!</p>
+                </div>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Total Badges</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">This Month</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Completion Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badges Section -->
+            <div class="badges-section">
+                <h2 class="section-title">Badges Earned So Far</h2>
+                
+                <div class="badges-grid">
+                    <!-- Gratitude Badges -->
+                    <div class="badge-item earned" data-badge="gratitude-starter">
+                        <div class="badge-icon">🙏</div>
+                        <h3 class="badge-title">Gratitude Starter</h3>
+                        <p class="badge-description">Completed gratitude theme</p>
+                        <div class="badge-date">Earned 2 days ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="gratitude-master">
+                        <div class="badge-icon">🌟</div>
+                        <h3 class="badge-title">Gratitude Master</h3>
+                        <p class="badge-description">All gratitude assignments complete</p>
+                        <div class="badge-date">Earned today</div>
+                    </div>
+
+                    <!-- Previous Theme Badges -->
+                    <div class="badge-item earned" data-badge="respect-beginner">
+                        <div class="badge-icon">🤝</div>
+                        <h3 class="badge-title">Respect Beginner</h3>
+                        <p class="badge-description">Started respect theme</p>
+                        <div class="badge-date">Earned 1 week ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="respect-achiever">
+                        <div class="badge-icon">💎</div>
+                        <h3 class="badge-title">Respect Achiever</h3>
+                        <p class="badge-description">Completed respect theme</p>
+                        <div class="badge-date">Earned 1 week ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="discipline-starter">
+                        <div class="badge-icon">⚡</div>
+                        <h3 class="badge-title">Discipline Starter</h3>
+                        <p class="badge-description">Started discipline theme</p>
+                        <div class="badge-date">Earned 2 weeks ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="discipline-master">
+                        <div class="badge-icon">🏅</div>
+                        <h3 class="badge-title">Discipline Master</h3>
+                        <p class="badge-description">Completed discipline theme</p>
+                        <div class="badge-date">Earned 2 weeks ago</div>
+                    </div>
+
+                    <!-- Streak Badges -->
+                    <div class="badge-item earned" data-badge="week-streak-1">
+                        <div class="badge-icon">📅</div>
+                        <h3 class="badge-title">Week Warrior</h3>
+                        <p class="badge-description">1 week streak</p>
+                        <div class="badge-date">Earned 2 weeks ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="week-streak-2">
+                        <div class="badge-icon">📅📅</div>
+                        <h3 class="badge-title">Fortnight Fighter</h3>
+                        <p class="badge-description">2 week streak</p>
+                        <div class="badge-date">Earned 1 week ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="week-streak-3">
+                        <div class="badge-icon">📅📅📅</div>
+                        <h3 class="badge-title">Triple Week Titan</h3>
+                        <p class="badge-description">3 week streak</p>
+                        <div class="badge-date">Earned today</div>
+                    </div>
+
+                    <!-- Special Achievement Badges -->
+                    <div class="badge-item earned" data-badge="first-perfect">
+                        <div class="badge-icon">💯</div>
+                        <h3 class="badge-title">Perfect Score</h3>
+                        <p class="badge-description">100% on first assignment</p>
+                        <div class="badge-date">Earned 3 weeks ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="helpful-student">
+                        <div class="badge-icon">🤲</div>
+                        <h3 class="badge-title">Helpful Student</h3>
+                        <p class="badge-description">Helped classmates 5 times</p>
+                        <div class="badge-date">Earned 1 week ago</div>
+                    </div>
+
+                    <div class="badge-item earned" data-badge="family-educator">
+                        <div class="badge-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="badge-title">Family Educator</h3>
+                        <p class="badge-description">Shared themes with family</p>
+                        <div class="badge-date">Earned 2 days ago</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Badge Preview -->
+            <div class="next-badge-section">
+                <h2 class="section-title">Next Badge Preview</h2>
+                <div class="next-badge-preview">
+                    <div class="next-badge locked">
+                        <div class="badge-icon">🔒</div>
+                        <h3 class="badge-title">Month Master</h3>
+                        <p class="badge-description">Complete 4 weeks in a row</p>
+                        <div class="progress-info">
+                            <div class="progress-text">3 of 4 weeks completed</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motivation Section -->
+            <div class="motivation-section">
+                <div class="motivation-card">
+                    <div class="motivation-icon">🚀</div>
+                    <h3>You're on Fire!</h3>
+                    <p>Your 3-week streak shows incredible dedication. Keep going and unlock even more amazing badges!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Badge Detail Modal -->
+        <div class="badge-modal" id="badgeModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-badge-icon" id="modalBadgeIcon">🙏</div>
+                    <h3 id="modalBadgeTitle">Badge Title</h3>
+                    <p id="modalBadgeDescription">Badge description goes here</p>
+                </div>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Earned:</span>
+                        <span class="detail-value" id="modalBadgeDate">Date</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Category:</span>
+                        <span class="detail-value" id="modalBadgeCategory">Category</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Difficulty:</span>
+                        <span class="detail-value" id="modalBadgeDifficulty">Difficulty</span>
+                    </div>
+                </div>
+                <button class="modal-close-btn" onclick="closeBadgeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="badges.js"></script>
+</body>
+</html>

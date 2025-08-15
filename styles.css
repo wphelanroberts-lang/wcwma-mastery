@@ -1,0 +1,439 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* WCWMA Red to Gold Gradient Background */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #DC2626 0%, #EA580C 25%, #F59E0B 50%, #EAB308 75%, #FCD34D 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* WCWMA Header Logo */
+.wcwma-header-logo {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.school-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+/* Mastery Title */
+.mastery-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.02em;
+}
+
+/* Theme Headline */
+.theme-headline {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    letter-spacing: -0.03em;
+}
+
+/* Great Grand Master Section */
+.ggm-section {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.ggm-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+.ggm-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.ggm-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+.ggm-quote {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+}
+
+.ggm-name {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Badge Container */
+.badge-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Gratitude Starter Badge */
+.gratitude-badge {
+    background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gratitude-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.badge-icon {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Progress Container */
+.progress-container {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #FCD34D, #F59E0B);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: progressGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes progressGlow {
+    from {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+}
+
+.progress-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Assignments Link */
+.assignments-link {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.assignments-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #FFFFFF, #F8FAFC);
+    color: #DC2626;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.assignments-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #F59E0B;
+}
+
+.assignments-btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+    .btn-text {
+        white-space: nowrap;
+    }
+}
+
+/* Badges Link */
+.badges-link {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.badges-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #FCD34D, #F59E0B);
+    color: #DC2626;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.badges-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #DC2626;
+}
+
+.badges-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Burned-in Caption */
+.burned-caption {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.02em;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mastery-title {
+        font-size: 2rem;
+    }
+    
+    .theme-headline {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+    
+    .gratitude-badge {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .badge-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .badge-text {
+        font-size: 1rem;
+    }
+    
+
+     
+     .header-logo {
+         width: 100px;
+         height: 100px;
+     }
+     
+     .school-name {
+         font-size: 1.2rem;
+     }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .mastery-title {
+        font-size: 1.8rem;
+    }
+    
+         .theme-headline {
+         font-size: 2.5rem;
+         margin-bottom: 30px;
+     }
+     
+     .ggm-image {
+         height: 250px;
+     }
+     
+     .ggm-quote {
+         font-size: 1.1rem;
+     }
+     
+     .ggm-name {
+         font-size: 0.9rem;
+     }
+     
+     .gratitude-badge {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .badge-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .progress-container {
+        max-width: 300px;
+    }
+    
+    .assignments-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    .btn-icon {
+        font-size: 1.2rem;
+    }
+    
+         .badges-btn {
+         padding: 14px 20px;
+         font-size: 1rem;
+     }
+     
+     .header-logo {
+         width: 80px;
+         height: 80px;
+     }
+     
+     .school-name {
+         font-size: 1rem;
+     }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .progress-fill {
+        animation: none;
+    }
+    
+    .gratitude-badge:hover {
+        transform: none;
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.1),
+            0 8px 16px rgba(0, 0, 0, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .gratitude-badge {
+        border: 3px solid #000000;
+    }
+    
+    .progress-bar {
+        border: 2px solid #FFFFFF;
+    }
+}
