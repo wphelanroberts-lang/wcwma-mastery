@@ -142,7 +142,7 @@ body {
 
 /* Gratitude Starter Badge */
 .gratitude-badge {
-    background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
+    background: linear-gradient(145deg, #FFFFFF, #FEF3C7);
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -151,18 +151,19 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.1),
-        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 20px 40px rgba(245, 158, 11, 0.15),
+        0 8px 16px rgba(245, 158, 11, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #F59E0B;
 }
 
 .gratitude-badge:hover {
     transform: translateY(-5px);
     box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.15),
-        0 10px 20px rgba(0, 0, 0, 0.08),
+        0 25px 50px rgba(245, 158, 11, 0.25),
+        0 10px 20px rgba(245, 158, 11, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
@@ -171,6 +172,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
 }
 
 .badge-text {
